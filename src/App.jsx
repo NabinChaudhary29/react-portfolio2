@@ -1,3 +1,4 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 
 import { About } from "./components/About";
@@ -20,21 +21,28 @@ function App() {
         </label>
         {/* <!-- navbar --> */}
         <Navbar />
+        <Routes>
+          <Route path="/" element={<Hero/>}/>
+          <Route path="skills" element={<Skill/>}/>
+          <Route path="projects" element={<Project/>}/>
+          <Route path="contact" element={<Contact/>}/>
+          <Route path="about" element={<About/>}/>
+        </Routes>
 
         {/* <!-- hero section  --> */}
-        <Hero />
+        {/* <Hero /> */}
 
         {/* <!-- skills section  --> */}
-        <Skill />
+        {/* <Skill /> */}
 
         {/* <!-- project section  --> */}
-        <Project />
+        {/* <Project /> */}
 
         {/* <!-- about me section  --> */}
-        <About />
+        {/* <About /> */}
 
         {/* <!-- Contact section  --> */}
-        <Contact />
+        {/* <Contact /> */}
 
         {/* <!-- Footer section  --> */}
         <Footer />
