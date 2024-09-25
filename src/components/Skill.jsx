@@ -1,8 +1,10 @@
 import React from "react";
 import { Title } from "./Title";
+import { LayOut } from "./LayOut";
 
 export const Skill = () => {
   return (
+    <>
     <section className="skills" id="skills">
       <Title title="Skills" />
 
@@ -29,5 +31,6 @@ export const Skill = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };

@@ -8,45 +8,28 @@ import { Hero } from "./components/Hero";
 import { Navbar } from "./components/Navbar";
 import { Project } from "./components/Project";
 import { Skill } from "./components/Skill";
+import { LayOut } from "./components/LayOut";
+import { PageNotFound } from "./components/PageNotFound";
+
 
 function App() {
   return (
     <>
       {/* <!-- dar mode toggler --> */}
 
-      <input type="checkbox" id="darkMode" />
-      <div className="wrapper">
-        <label htmlFor="darkMode">
-          <i className="fa-solid fa-circle-half-stroke"></i>
-        </label>
-        {/* <!-- navbar --> */}
-        <Navbar />
+      
         <Routes>
-          <Route path="/" element={<Hero/>}/>
-          <Route path="skills" element={<Skill/>}/>
-          <Route path="projects" element={<Project/>}/>
-          <Route path="contact" element={<Contact/>}/>
-          <Route path="about" element={<About/>}/>
+          <Route path="/" element={<LayOut/>}>
+            <Route path="/" element={<Hero/>}/>
+            <Route path="skills" element={<Skill/>}/>
+            <Route path="projects" element={<Project/>}/>
+            <Route path="contact" element={<Contact/>}/>
+            <Route path="about" element={<About/>}/>
+            <Route path="*" element={<PageNotFound/>}/>
+          </Route>
         </Routes>
-
-        {/* <!-- hero section  --> */}
-        {/* <Hero /> */}
-
-        {/* <!-- skills section  --> */}
-        {/* <Skill /> */}
-
-        {/* <!-- project section  --> */}
-        {/* <Project /> */}
-
-        {/* <!-- about me section  --> */}
-        {/* <About /> */}
-
-        {/* <!-- Contact section  --> */}
-        {/* <Contact /> */}
-
-        {/* <!-- Footer section  --> */}
-        <Footer />
-      </div>
+        
+      
     </>
   );
 }

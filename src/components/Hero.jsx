@@ -1,5 +1,6 @@
 import React from "react";
 import prem from "../assets/prem.png";
+import { LayOut } from "./LayOut";
 
 export const Hero = () => {
   return (
